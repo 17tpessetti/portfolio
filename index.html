@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='en' dir='ltr'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/html5reset.css">
@@ -7,18 +8,22 @@
         <title>Taylor Pessetti Portfolio</title>
     </head>
     <body>
-        <div class="skip"><a href="#main">Skip to Main Content</a></div>
+        <div class="skip"><a href="#welcome">Skip to Main Content</a></div>
         <div class="container">
-            <div class="nav">
-                <h1>Taylor Pessetti</h1>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="leadership.html">Leadership</a></li>
-                        <li><a href="resume.html">Resume</a></li>
-                    </ul>
-                </nav>
+        <div class="nav">
+            <h1>Taylor Pessetti</h1>
+            <nav>
+                <ul class = navigation>
+                    <li><a class = 'current' href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="photos.html">Photos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+            <div id= "welcome">
+                <h1>Welcome to my Portfolio!</h1>
             </div>
             <div class="about-text">
                 <h2>About Me</h2>
@@ -40,19 +45,27 @@
             </div>
             <div class="work-experience-text">
                 <h2>Work Experience</h2>
-                <h4>Kellogg Company</h4>
-                <p class=kellogg-description>January 2017 - August 2019</p>
-                <h4>Binder Park Zoo</h4>
-                <p class=bpz-description>May 2015 - August 2016</p>
             </div>
-            <div class="work-experience-images">
+            <div class="kellogg-description">
+                <h4>Kellogg Company</h4>
+                <p>January 2017 - August 2019</p>
+            </div>
+            <div class="bpz-description">
+                <h4>Binder Park Zoo</h4>
+                <p>May 2015 - August 2016</p>
+            </div>
+
+            <div class="kellogg-image">
                 <img src="images/kelloggs-logo.jpg" alt="Kellogg's Logo"/>
+            </div>
+            <div class="bpz-image">
                 <img src="images/binderparkzoo.jpg" alt="Binder Park Zoo Logo"/>
             </div>
             <div class="contact-text">
-                <h2>Contact</h2>
-                <h4>If you have any questions, please feel free to contact me!</h4>
+                <h2>Connect</h2>
+                <h4>If you have any questions, please feel free to connect with me!</h4>
             </div>
+            <!--
             <div class="contact-images">
                 <ul>
                     <li><a href="https://www.linkedin.com/in/taylor-pessetti-450214154"></a><img src="images/linkedin_logo.jpg" alt="Linkedin Linked Image"/></a></li>
@@ -61,16 +74,17 @@
                     <li><a href="https://umich.joinhandshake.com/users/4117407"></a><img src="images/handshake_logo.jpg" alt="Handshake Linked Image"/></a></li>
                 </ul>
             </div>
+            -->
             <div class="contact-image-descriptions">
                 <ul>
-                    <li>Linkedin</li>
-                    <li>Email</li>
-                    <li>Github</li>
-                    <li>Handshake</li>
+                        <li><a href="https://www.linkedin.com/in/taylor-pessetti-450214154">Linkedin</a></li>
+                        <li><a href= "mailto: tmpess@umich.edu">Email</a></li>
+                        <li><a href="https://github.com/17tpessetti">Github</a></li>
+                        <li><a href="https://umich.joinhandshake.com/users/4117407">Handshake</a></li>
                 </ul>
             </div>
             <footer>
-                
+                <p>Taylor Pessetti</p>
             </footer>
         </div>
     </body>
