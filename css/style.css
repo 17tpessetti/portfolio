@@ -29,7 +29,7 @@ body{
 
     .container{
        display: grid;
-       grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto;
+       grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto;
        grid-template-columns: 1fr;
        grid-row-gap: 50px;
        align-items: center;
@@ -56,7 +56,7 @@ body{
 
    .container-photos{
     display: grid;
-    grid-template-rows: auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
     grid-template-columns: 100%;
     grid-row-gap: 50px;
     align-items: center;
@@ -77,21 +77,20 @@ body{
        grid-column-end: -1;
        text-align: center;
        width: 100%;
-       padding: 20px;
        background-color: #0798FB;
        color: white;
-       width: 100%;
+       padding: 30px 0px 30px 0px;
    }
    .nav h1{
        text-align: center;
-       padding: 0px 0px 10px 0px;
        font-size: 30px;
    }
 
    .nav ul{
        list-style-type: none;
        overflow: hidden;
-       padding: 20px 0px 20px 0px;
+       padding: 20px 0px 0px 0px;
+       line-height: 2;
    }
 
    .nav ul li{
@@ -110,9 +109,7 @@ body{
    }
 
    .nav .current{
-       background-color: white;
        color: black;
-       border: 3px solid black;
    }
 
 
@@ -158,6 +155,33 @@ body{
 
 }
 
+@-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+#welcome h1{
+    -webkit-animation-name: fadeIn; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+    animation-name: 'fadeIn';
+    animation-duration: 3s;
+}
+
 .about-text{
     grid-column-start: 1;
     grid-column-end: 2;
@@ -178,8 +202,8 @@ body{
 }
 
 .about-image img{
-    max-height: 420px;
-    max-width: 460px;
+    max-height: 350px;
+    max-width: 350px;
 }
 
 .education-text{
@@ -187,6 +211,15 @@ body{
     grid-column-end: 2;
     grid-row-start: 5;
     grid-row-end: 6;
+    display: inline-block;
+}
+.education-text h4{
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.education-text p{
+    text-align: center;
 }
 
 .education-image{
@@ -194,6 +227,10 @@ body{
     grid-column-end: 2;
     grid-row-start: 6;
     grid-row-end: 7;
+}
+
+.education-image img{
+    max-width: 350px;
 }
 
 .work-experience-text{
@@ -204,7 +241,7 @@ body{
 
 }
 
-.kellogg-description{
+.kellogg{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 8;
@@ -212,40 +249,37 @@ body{
     text-align: center;
 }
 
-.bpz-description{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 10;
-    grid-row-end: 11;
-    text-align: center;
-}
-
-.kellogg-image{
+.bpz{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 9;
     grid-row-end: 10;
-
+    text-align: center;
 }
  
 .kellogg-image img{
-    height: 125px;
-    width: 325px;
+    max-height: 125px;
+    max-width: 325px;
 }
 
-.bpz-image{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 11;
-    grid-row-end: 12;
-
+.bpz-image img{
+    max-width: 350px;
 }
+
+.kellogg-description p{
+    text-align: center;
+}
+
+.bpz-description p{
+    text-align: center;
+}
+
 
 .contact-text{
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 12;
-    grid-row-end: 13;
+    grid-row-start: 10;
+    grid-row-end: 11;
     text-align: center;
 }
 
@@ -261,8 +295,8 @@ body{
 .contact-image-descriptions{
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 13;
-    grid-row-end: 14;
+    grid-row-start: 11;
+    grid-row-end: 12;
 }
 
 footer{
@@ -274,7 +308,6 @@ footer{
     font-size: 20px;
     width: 100vw;
     text-align: center;
-    padding: 30px;
     position: relative;
     bottom: 0;
 
@@ -284,6 +317,15 @@ footer p{
     text-align: center;
     font-size: 24pt;
     font-weight: bold;
+}
+
+.insetshadow{
+    color: #2c2c2c;
+    background-color: #0798FB;
+    letter-spacing: .05em;
+    text-shadow: 
+      4px 4px 0px #0798FB,
+      7px 7px 0px rgba(0, 0, 0, 0.2);
 }
 
 /*this is for the projects page */
@@ -322,6 +364,10 @@ footer p{
 
 }
 
+.truck-monitoring-text h2{
+    text-align: center;
+}
+
 .truck-monitoring-image{
     grid-column-start: 1;
     grid-column-end: 2;
@@ -351,8 +397,8 @@ footer p{
 }
 
 .gatorsync-image img{
-    max-height: 400px;
-    max-width: 400px;
+    max-height: 350px;
+    max-width: 350px;
 }
 
 /* this is for the leadership tab*/
@@ -362,6 +408,10 @@ footer p{
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
+}
+
+#leadership-header h1{
+    font-size: 45pt;
 }
 
 .mrun-text{
@@ -378,6 +428,10 @@ footer p{
     grid-row-end: 5;
 }
 
+.mrun-image img{
+    max-width: 350px;
+}
+
 .joybol-text{
     grid-column-start: 1;
     grid-column-end: 2;
@@ -390,6 +444,10 @@ footer p{
     grid-column-end: 2;
     grid-row-start: 6;
     grid-row-end: 7;
+}
+
+.joybol-image img{
+    max-width: 350px;
 }
 
 .ram-text{
@@ -407,8 +465,7 @@ footer p{
 }
 
 .ram-image img{
-    max-height: 400px;
-    max-width: 500px;
+    max-width: 350px;
 }
 
 .campus-band-text{
@@ -426,8 +483,7 @@ footer p{
 }
 
 .campus-band-image img{
-    max-height: 400px;
-    max-width: 500px;
+    max-width: 350px;
 }
 
 /* this is for the photos tab */
@@ -447,8 +503,7 @@ footer p{
 }
 
 .photos-size img{
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 350px;
     margin: 0px 0px 50px 0px;
 }
 .photo-size{
@@ -469,11 +524,11 @@ footer p{
     text-align: center;
 }
 
-.form{
+form{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
-    grid-row-end: -1;
+    grid-row-end: 4;
 }
 
 .form-group{
@@ -481,14 +536,14 @@ footer p{
 }
 
 input{
-    height: 30px;
-    width: 400px;
+    height: 50px;
+    width: 350px;
 
 }
 
 textarea{
     height: 60px;
-    width: 300px;
+    width: 350px;
 }
 
 .text-center{
@@ -500,7 +555,7 @@ textarea{
     display: grid;
     width: 100vw;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto;
     align-items: center;
 }
 
@@ -530,30 +585,30 @@ textarea{
     justify-items: center;
 }
     
-    .container-contact{
+    /*.container-contact{
     display: grid;
     grid-template-rows: auto auto auto auto;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 50px;
     align-items: center;
     justify-items: center;
-    }
+    }*/
 
 .nav{
     grid-column-start: 1;
     grid-column-end: 3;
     width: 100%;
-    padding: 20px;
     background-color: #0798FB;
     color: white;
     text-align: right;
+    height: 50px;
 }
 .nav h1{
     text-align: left;
-    font-size: 32pt;
-    position: relative;
+    font-size: 28pt;
+    position: absolute;
     left: 40px;
-    top: 30px;
+    top: 40px;
 }
 
 .nav ul a{
@@ -566,8 +621,8 @@ textarea{
     list-style-type: none;
     overflow: hidden;
     padding: 20px 0px 20px 0px;
-    position: relative;
-    bottom: 28px;
+    position: absolute;
+    top: 28px;
     right: 5px;
 }
 
@@ -605,24 +660,27 @@ textarea{
 }
 
 .about-image img{
-    max-height: 1fr;
-    max-width: 1fr;
+    max-height: 350px;
+    max-width: 350px;
 }
 
 .education-text{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-
-.education-image{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 4;
     grid-row-end: 5;
 }
 
+.education-image{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.education-image img{
+    max-height: 350px;
+    max-width: 350px;
+}
 .work-experience-text{
     grid-column-start: 1;
     grid-column-end: 3;
@@ -631,56 +689,69 @@ textarea{
 
 }
 
-.kellogg-description{
+.work-experience-text h2{
+    font-size: 40pt;
+    text-decoration: underline;
+}
+
+.kellogg{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 6;
     grid-row-end: 7;
+}
+
+.kellogg-description p{
     text-align: center;
 }
 
-.bpz-description{
+.bpz-description p{
+    text-align: center;
+}
+
+.bpz{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 6;
     grid-row-end: 7;
-    text-align: center;
 }
 
-.kellogg-image{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 7;
-    grid-row-end: 8;
-
-}
-
-.bpz-image{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 7;
-    grid-row-end: 8;
-
+.bpz-image img{
+    max-width: 400px;
 }
 
 .contact-text{
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 8;
-    grid-row-end: 9;
+    grid-row-start: 7;
+    grid-row-end: 8;
     text-align: center;
 }
 
+.contact-text h2{
+    font-size: 40pt;
+    text-decoration: underline;
+    padding: 0px 0px 40px 0px;
+}
+
 .contact-image-descriptions ul{
-    list-style: none;
-    text-align: center;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.contact-image-descriptions ul li{
+    display: inline;
 }
 
 .contact-image-descriptions{
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 9;
-    grid-row-end: 10;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+
+.contact-image-descriptions a{
+    font-size: 24pt;
 }
 
 footer{
@@ -775,6 +846,22 @@ footer{
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
+}
+.mrun-image img{
+    max-height: 350px;
+    max-width: 350px;
+}
+.joybol-image img{
+    max-height: 350px;
+    max-width: 350px;
+}
+.ram-image img{
+    max-height: 350px;
+    max-width: 350px;
+}
+.campus-band-image img{
+    max-height: 350px;
+    max-width: 350px;
 }
 
 .joybol-text{
@@ -965,6 +1052,36 @@ footer{
     #welcome{
         padding: 200px 0px 200px 0px;
     }
+
+    .about-image img{
+        max-height: 450px;
+        max-width: 450px;
+    }
+
+    .education-image img{
+        max-height: 450px;
+        max-width: 450px;
+    }
+
+    /*this is for the projects page*/
+
+.mrun-image img{
+    max-height: 450px;
+    max-width: 450px;
+}
+.joybol-image img{
+    max-height: 450px;
+    max-width: 450px;
+}
+.ram-image img{
+    max-height: 450px;
+    max-width: 450px;
+}
+.campus-band-image img{
+    max-height: 450px;
+    max-width: 450px;
+}
+
     /*this is for the photos page*/
     .container-photos{
         display: grid;
