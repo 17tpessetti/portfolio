@@ -180,6 +180,7 @@ body{
     -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
     animation-name: 'fadeIn';
     animation-duration: 3s;
+    background-color: black;
 }
 
 .about-text{
@@ -313,7 +314,7 @@ footer{
 
 }
 
-footer p{
+footer h1{
     text-align: center;
     font-size: 24pt;
     font-weight: bold;
